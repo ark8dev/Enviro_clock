@@ -1,3 +1,4 @@
+// lcd func definations
 #include<lpc214x.h>
 #include"types.h"
 #include"delay.h"
@@ -80,4 +81,5 @@ void Build_Char_LCD(u8 *p,u8 nbytes)
                 WriteLCD(p[i]);
         }
         CmdLCD(GOTO_LINE1_POS0);
+
 }
