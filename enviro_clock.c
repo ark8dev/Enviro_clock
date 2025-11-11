@@ -1,3 +1,4 @@
+// enviro_clock_project func definations
 #include<lpc214x.h>
 #include"lcd.h"
 #include"lcd_defines.h"
@@ -262,4 +263,5 @@ void DISPLAY_ADC_VAL(u32 adcval)
         CmdLCD(GOTO_LINE1_POS0+14);
         CharLCD('C');
 }
+
 ~
