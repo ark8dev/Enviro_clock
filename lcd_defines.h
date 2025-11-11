@@ -1,3 +1,4 @@
+// lcd defines
 //HD44780 commands
 
 #define CLEAR_LCD        0x01
@@ -30,3 +31,4 @@
 #define LCD_RS    5     //pin 0.5
 #define LCD_EN    6     //pin 0.6
 #define LCD_RW    7     //pin 0.7
+
