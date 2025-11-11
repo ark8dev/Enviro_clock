@@ -1,3 +1,4 @@
+//analog to digital convertion
 #include<lpc214x.h>
 #include"types.h"
 #include"delay.h"
@@ -16,4 +17,5 @@ void READ_ADC(u32 chno,u32 *adcval)
         while(((AD0GDR>>DONE_BIT)&1)==0);
         AD0CR&=~(1<<ADC_START_BITS);
         *adcval=(AD0GDR>>RESULT_BITS)&1023;
+
 }
