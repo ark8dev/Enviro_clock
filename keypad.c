@@ -1,11 +1,12 @@
+// keypad func definations
 #include<lpc214x.h>
 #include"types.h"
 #include"kpm_defines.h"
 //#include"defines.h"
 u32 kpmlut[4][4]={      {1,2,3,4},
-                                        {5,6,7,8},
-                                        {9,0,0,100},// 100 up arrow keyval
-                                        {99,0,88,102}};// 99 enter keyvalue.88 backspace key value,102 down arrow key value
+                        {5,6,7,8},
+                        {9,0,0,100},// 100 up arrow keyval
+                        {99,0,88,102}};// 99 enter keyvalue.88 backspace key value,102 down arrow key value
 void INIT_KPM()
 {
         WRITENIBBLE(IODIR1,ROW0,0x0f);
@@ -23,13 +24,13 @@ u32 ROWCHECK_KPM()
                 WRITENIBBLE(IOPIN1,ROW0,(~(1<<i)));
                 if(COLSCAN_KPM()==0)
                 {
-                                        break;
-                                }
+                      break;
                 }
+        }
 
         //cfging row pins as gpio out, col pins as gpio input, default all pins are inpu
-                                WRITENIBBLE(IOPIN1,ROW0,0);
-                                return i;
+        WRITENIBBLE(IOPIN1,ROW0,0);
+        return i;
 }
 u32 COLCHECK_KPM()
 {
@@ -37,9 +38,9 @@ u32 COLCHECK_KPM()
         for(i=0;i<4;i++)
         {
                 if(READBIT(IOPIN1,COL0+i)==0)
-                                                        break;
-                }
-                return i;
+                          break;
+        }
+        return i;
 }
 
 u32 KEYSCAN_KPM()
@@ -49,5 +50,6 @@ u32 KEYSCAN_KPM()
         row=ROWCHECK_KPM();
         col=COLCHECK_KPM();
         keyval=kpmlut[row][col];
-                return keyval;
+        return keyval;
+
 }
