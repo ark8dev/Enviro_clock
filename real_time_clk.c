@@ -1,4 +1,5 @@
-include<lpc214x.h>
+// real time clock func definations
+#include<lpc214x.h>
 #include"types.h"
 #include"delay.h"
 #include"rtc_defines.h"
@@ -79,7 +80,7 @@ void DisplayRTCDay(u32 dayofweek)
 }
 void SetRTCDayinfo(u32 day)
 {
-                         DOW=day;
+          DOW=day;
 }
 u32 SetRTCHour(void)
 {
@@ -95,7 +96,7 @@ u32 SetRTCHour(void)
                         delayS(1);
                         goto label;
                 }
-                return h;
+       return h;
 }
 u32 SetRTCMin(void)
 {
@@ -196,5 +197,3 @@ u32 SetRTCDay()
                 }
                 return h;
 }
-~
-~
