@@ -1,3 +1,4 @@
+// enviro_clock_project main 
 #include <lpc214x.h>
 #include "lcd.h"
 #include "kpm.h"
@@ -37,4 +38,5 @@ int main()
                                 alarmcheck();
                                 clock_setting();
                 }
+
 }
