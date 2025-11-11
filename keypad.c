@@ -2,7 +2,7 @@
 #include<lpc214x.h>
 #include"types.h"
 #include"kpm_defines.h"
-//#include"defines.h"
+#include"defines.h"
 u32 kpmlut[4][4]={      {1,2,3,4},
                         {5,6,7,8},
                         {9,0,0,100},// 100 up arrow keyval
@@ -53,3 +53,4 @@ u32 KEYSCAN_KPM()
         return keyval;
 
 }
+
