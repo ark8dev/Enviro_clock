@@ -1,3 +1,4 @@
+// delay definations
 #include"types.h"
 void delayUS(u32 dlyUs)
 {
@@ -13,4 +14,5 @@ void delayS(u32 dlyS)
 {
          dlyS*=12000000;
          while(dlyS--);
+
 }
