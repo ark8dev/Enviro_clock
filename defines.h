@@ -1,4 +1,4 @@
-
+// defines
 #define WRITEBYTE(word,bytestartpos,val)\
                 (word=((word&~(0xff<<bytestartpos))|(val<<bytestartpos)))
 #define READBIT(word,bitpos)\
@@ -15,4 +15,5 @@
 // external ineterrupts
 #define EINT0_CHN0 14
 #define BUZZER_PIN 16
+
 #define BUZZER_STOP_SW_PIN 17
