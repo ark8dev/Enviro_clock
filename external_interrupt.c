@@ -1,3 +1,4 @@
+// external interrupts defination
 #include<lpc214x.h>
 #include "types.h"
 #include "pin_connect_block.h"
@@ -31,4 +32,5 @@ void extint_INIT()
         EXTMODE=1<<0;
         // raising edge or falling edge
         EXTPOLAR=0;
+
 }
