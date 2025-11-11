@@ -1,8 +1,9 @@
+// pin connect block definations
 #include<LPC21xx.h>
 #include"types.h"
 void cfgportpinfunc(u32 PortNo,
-                                        u32 PinNo,
-                                        u32 PinFunc)
+                    u32 PinNo,
+                    u32 PinFunc)
 {
    if(PortNo==0)
    {
@@ -21,6 +22,6 @@ void cfgportpinfunc(u32 PortNo,
         {
                 PINSEL2=((PINSEL2&~(3<<((PinNo-16)*2)))|(PinFunc<<((PinNo-16)*2)));
         }
-        }
-
+   }
 }
+
