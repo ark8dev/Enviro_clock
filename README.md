@@ -1,3 +1,5 @@
+# ENVIRO_CLOCK
+
  PROJECT OVERVIEW:
 -------------------
   The Enviro Clock is a compact embedded application designed to function as a digital environmental timekeeping device with alarm functionality.
